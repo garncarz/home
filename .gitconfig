@@ -1,0 +1,7 @@
+[user]
+	email = ondrej@garncarz.cz
+	name = Ondřej Garncarz
+[push]
+	default = simple
+[core]
+	commentchar = ";"
