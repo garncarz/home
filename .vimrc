@@ -103,3 +103,7 @@ set shiftwidth=4
 " saving without trailing spaces
 autocmd BufWritePre * :%s/\s\+$//e
 
+set autochdir
+
+" hiding files in Explorer
+let g:netrw_list_hide= '.*\.swp$,\~$,\.pyc$,^\.git/$'
