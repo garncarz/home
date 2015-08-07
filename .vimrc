@@ -85,7 +85,8 @@ if !exists(":DiffOrig")
           \ | wincmd p | diffthis
 endif
 
-set smartcase
+" set smartcase  " not exactly working, why?
+set ignorecase
 set tabstop=4
 set shiftwidth=4
 set expandtab  " no tabs
