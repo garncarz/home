@@ -102,3 +102,6 @@ set autochdir  " follow dirs
 
 " hiding files in Explorer
 let g:netrw_list_hide= '.*\.sw.$,\~$,\.pyc$,^\.git/$,^__pycache__/$'
+
+" recognise Prolog test suites
+au BufRead,BufNewFile *.plt setfiletype prolog
