@@ -5,8 +5,12 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1="\[\e[32m\]\u\[\e[35m\]@\h \[\e[0m\]\w$ "
-test -f ~/.promptrc && source ~/.promptrc
+if [ -f /etc/bashrc.global ]
+then
+    source /etc/bashrc.global
+else
+    PS1="\[\e[32m\]\u\[\e[35m\]@\h \[\e[0m\]\w$ "
+fi
 
 ulimit -u 500
 umask 077
@@ -30,4 +34,3 @@ export EDITOR="vim"
 export MANPAGER="/usr/bin/most -s"
 export MAILPATH=~/mail/inbox
 # export TMOUT=3600
-
