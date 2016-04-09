@@ -1,0 +1,28 @@
+source ~/.mutt/colors.rc
+source ~/.mutt/local.rc
+
+set reverse_name
+
+set spoolfile=+inbox
+set mbox=+mbox
+set record=+sent
+set postponed=+drafts
+
+mailboxes +inbox
+set move=no
+
+set header_cache=~/.mutt/hcache
+
+set editor="vim"
+set edit_headers=yes
+set locale="cs_CZ.UTF-8"
+set charset="UTF-8"
+set date_format="%d. %b (%A) v %H:%M:%S %Z %Y"
+set attribution="%D, %a napsal(a):"
+
+folder-hook =sent 'set index_format="%4C %Z %{%b %d} %-15.15t (%4l) %s"'
+folder-hook !=sent 'set index_format="%4C %Z %{%b %d} %-15.15F (%4l) %s"'
+folder-hook mbox 'set sort=threads'
+
+bind pager [ half-up
+bind pager ] half-down
