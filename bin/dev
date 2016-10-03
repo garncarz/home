@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+USER=${1:-ondra}
+SERVER=${2:-dev}
+
+ssh $USER@$SERVER -t "LANG=en_US.utf8 bash -c \"tmux a || tmux\""
