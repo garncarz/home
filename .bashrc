@@ -12,6 +12,8 @@ else
     PS1="\[\e[32m\]\u\[\e[35m\]@\h \[\e[0m\]\w$ "
 fi
 
+set +H  # no problems with exclamation mark
+
 ulimit -u 500
 umask 077
 
