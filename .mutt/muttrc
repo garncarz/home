@@ -1,6 +1,9 @@
 source ~/.mutt/colors.rc
 source ~/.mutt/local.rc
 
+set alias_file=~/.mutt/aliases
+source $alias_file
+
 set reverse_name
 
 set spoolfile=+inbox
