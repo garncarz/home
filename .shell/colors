@@ -1,6 +1,7 @@
 # http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 FM_RESET="\e[0m"
+FM_BOLD="\e[1m"
 
 FG_RESET="\e[39m"
 FG_BLACK="\e[30m"
@@ -37,3 +38,8 @@ BG_BLUE_LIGHT="\e[104m"
 BG_MAGENTA_LIGHT="\e[105m"
 BG_CYAN_LIGHT="\e[106m"
 BG_WHITE="\e[107m"
+
+
+FM_USER=$FG_GREEN
+FM_ADMIN="${FM_BOLD}${FG_RED}"
+FM_MACHINE=$FG_MAGENTA

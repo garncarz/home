@@ -3,17 +3,24 @@
 
 . ~/.shell/colors
 
-PS1="${FG_GREEN}\u${FG_MAGENTA}@\h ${FM_RESET}\w$ "
-
 if [ -f /etc/bashrc.global ]
 then
     source /etc/bashrc.global
 fi
 
+if [[ `whoami` == "root" ]]
+then
+    PS1="${FM_ADMIN}\u${FM_RESET}${FM_MACHINE}@\h ${FM_RESET}\w# "
+    umask 022
+    export TMOUT=600
+else
+    PS1="${FM_USER}\u${FM_MACHINE}@\h ${FM_RESET}\w$ "
+    umask 077
+fi
+
 set +H  # no problems with exclamation mark
 
 ulimit -u 500
-umask 077
 
 alias ls="ls --color=auto -h --group-directories-first --time-style=long-iso"
 alias ll="ls -l"
@@ -33,7 +40,6 @@ export PATH=~/bin:~/virtualenv/bin:~/.local/bin:~/.gem/ruby/2.2.0/bin:$PATH
 export EDITOR="vim"
 export MANPAGER="/usr/bin/most -s"
 export MAILPATH=~/mail/inbox
-# export TMOUT=3600
 
 if [ -f ~/.bashrc.local ]
 then
