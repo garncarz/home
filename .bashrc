@@ -1,7 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1="\[\e[32m\]\u\[\e[35m\]@\h \[\e[0m\]\w$ "
+. ~/.shell/colors
+
+PS1="${FG_GREEN}\u${FG_MAGENTA}@\h ${FM_RESET}\w$ "
 
 if [ -f /etc/bashrc.global ]
 then
