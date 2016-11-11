@@ -1,15 +1,11 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+PS1="\[\e[32m\]\u\[\e[35m\]@\h \[\e[0m\]\w$ "
 
 if [ -f /etc/bashrc.global ]
 then
     source /etc/bashrc.global
-else
-    PS1="\[\e[32m\]\u\[\e[35m\]@\h \[\e[0m\]\w$ "
 fi
 
 set +H  # no problems with exclamation mark
@@ -36,3 +32,8 @@ export EDITOR="vim"
 export MANPAGER="/usr/bin/most -s"
 export MAILPATH=~/mail/inbox
 # export TMOUT=3600
+
+if [ -f ~/.bashrc.local ]
+then
+    source ~/.bashrc.local
+fi
