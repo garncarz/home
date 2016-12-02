@@ -8,19 +8,22 @@ then
     source /etc/bashrc.global
 fi
 
-if [[ `whoami` == "root" ]]
+if [ "`uname -o`" == "Cygwin" ]
+then
+    PS1="\n${FG_GREEN}\u@\h ${FG_YELLOW}\w${FM_RESET}\n\$ "
+elif [[ `whoami` == "root" ]]
 then
     PS1="${FM_ADMIN}\u${FM_RESET}${FM_MACHINE}@\h ${FM_RESET}\w# "
     umask 022
     export TMOUT=600
+    ulimit -u 500
 else
     PS1="${FM_USER}\u${FM_MACHINE}@\h ${FM_RESET}\w$ "
     umask 077
+    ulimit -u 500
 fi
 
 set +H  # no problems with exclamation mark
-
-ulimit -u 500
 
 alias ls="ls --color=auto -h --group-directories-first --time-style=long-iso"
 alias ll="ls -l"
