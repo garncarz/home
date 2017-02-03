@@ -39,7 +39,7 @@ alias egrep="egrep --color"
 alias free="free -h"
 alias pdflatex="pdflatex -output-directory $HOME/tmp/pdf"
 
-export PATH=~/bin:~/virtualenv/bin:~/.local/bin:~/.gem/ruby/2.2.0/bin:$PATH
+export PATH=~/bin:~/virtualenv/bin:~/.local/bin:$PATH
 export EDITOR="vim"
 export MANPAGER="/usr/bin/most -s"
 export MAILPATH=~/mail/inbox
