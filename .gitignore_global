@@ -1,4 +1,5 @@
 *~
 *.sw*
 .cache
+.idea
 __pycache__
