@@ -89,8 +89,8 @@ endif
 
 " set smartcase  " not exactly working, why?
 set ignorecase
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab  " no tabs
 
 " visible tabs
