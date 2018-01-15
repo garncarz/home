@@ -43,6 +43,7 @@ export PATH=~/bin:~/virtualenv/bin:~/.local/bin:$PATH
 export EDITOR="vim"
 export MANPAGER="/usr/bin/most -s"
 export MAILPATH=~/mail/inbox
+export PROMPT_COMMAND="history -a"  # remember all Bash sessions
 
 if [ -f ~/.bashrc.local ]
 then
