@@ -37,7 +37,6 @@ alias grep="grep --color"
 alias fgrep="fgrep --color"
 alias egrep="egrep --color"
 alias free="free -h"
-alias pdflatex="pdflatex -output-directory $HOME/tmp/pdf"
 
 export PATH=~/bin:~/virtualenv/bin:~/.local/bin:$PATH
 export EDITOR="vim"
