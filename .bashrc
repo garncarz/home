@@ -16,11 +16,11 @@ then
     PS1="${FM_ADMIN}\u${FM_RESET}${FM_MACHINE}@\h ${FM_RESET}\w# "
     umask 022
     export TMOUT=600
-    ulimit -u 500
+    # ulimit -u 500
 else
     PS1="${FM_USER}\u${FM_MACHINE}@\h ${FM_RESET}\w$ "
     umask 077
-    ulimit -u 500
+    # ulimit -u 500
 fi
 
 set +H  # no problems with exclamation mark
